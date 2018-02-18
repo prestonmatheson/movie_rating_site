@@ -1,0 +1,8 @@
+<h1>Movie Ratings</h1>
+
+<%= link_to "Upload a movie", new_movie_path, class: "btn btn-lg btn-success" %>
+
+<% @movies.each do |movie| %>
+  <h4><%= link_to movie.title, movie %></h4>
+  <p><%= movie.description %></p>
+<% end %>
