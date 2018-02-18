@@ -1,0 +1,22 @@
+<%= form_for(blog) do |f| %>
+  <% if blog.errors.any? %>
+    <% blog.errors.full_messages.each do |error| %>
+      <%= alert_generator error %>
+    <% end %>
+  <% end %>
+
+  <form>
+    Movie:<br>
+      <input type="text" name="movie"><br>
+    
+    Rating (between 1 and 5):<br>
+      <input type="number" name="quantity" min="1" max="5"><br>
+    
+    My review:<br>
+      <textarea rows="4" cols="50">
+        At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
+      </textarea><br>
+
+    <button type="button" onclick="alert('Submit')">Click Me!</button>
+  </form>
+<% end %>
